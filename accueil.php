@@ -22,7 +22,7 @@
             <!-- <div class="mb-3">
             <label for="id" class="form-label">id</label>
             </div> -->
-            <input type="hidden" name="id" value="<?php $_SESSION['id'] ;?>">
+            <input type="hidden" name="id" value="<?php $_SESSION['id'];?>">
 
             <div class="mb-12">
             <label for="title" class="form-label">titre</label>

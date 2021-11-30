@@ -43,8 +43,9 @@ foreach($donnees as $donnee ){
   <td><?php echo nl2br(htmlspecialchars($donnee['contenu']));?></td>
   <td><?php echo htmlspecialchars($donnee['date_creation']);?></td>
   <td>
-    <button class="btn btn-primary" id="update">modifier</button>
-    <button class="btn btn-danger" id="delete">supprimer</button>
+  <a class="btn btn-primary" href="update.php?id=<?php echo $donnee['id'];?>">modifier</a>
+  <a class="btn btn-danger" href="sup.php?id=<?php echo $donnee['id'];?>">supprimer</a>
+    
   </td>
 </tr>
 

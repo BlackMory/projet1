@@ -9,9 +9,10 @@ session_start();
     $req=$db->query("SELECT * FROM userss WHERE email= '$email' AND mdp='$mdp'");
     $req->execute(array('email' => $email,'mdp' => $mdp));
     $donnees=$req->fetch();
-    //print_r($donnees);
     if($donnees!=null && $donnees!=[]  && $donnees!=''){
-        $_SESSION['email']=$email;
+        $_SESSION['email']=$donnees['email'];
+        $_SESSION['id']=$donnees['id'];
+
         header('Location:accueil.php');
     }
     else{
@@ -68,7 +69,7 @@ session_start();
                         <input type="password" class="form-control" placeholder="mot de passe" name="mdp">
                     </div>
                     <button type="submit" class="btn btn-success " value="connexion" style="margin-top:29px;">connexion</button>
-                    <p class="box-register">Vous êtes nouveau ici? <a href="register.php">S'inscrire</a></p>
+                    <p class="box-register">Vous êtes nouveau ici? <a href="page1.php">S'inscrire</a></p>
                     <?php if (!empty($message)) { ?>
                         <p class="errorMessage"><?php echo $message; ?></p>
                     <?php } ?>

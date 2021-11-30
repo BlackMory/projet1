@@ -7,7 +7,7 @@ $db=new PDO('mysql:host=localhost;dbname=conn;charset=utf8','root','root',
     $nom=htmlspecialchars($_POST['nom']);
     $email=htmlspecialchars($_POST['email']);
     $mdp=htmlspecialchars($_POST['mdp']);
-    //insertion dans la base de donnee
+    //insertion dans la base de donnee les utilisateur
     $req=$db->prepare("INSERT INTO userss(prenom,nom,email,mdp) VALUES ('$prenom','$nom','$email','".hash('sha256', $mdp)."')");
     $req->execute(array($prenom,$nom,$email,$mdp));
     if($req){
@@ -51,7 +51,7 @@ $db=new PDO('mysql:host=localhost;dbname=conn;charset=utf8','root','root',
                          </div>
                          <div class="col-12">
                             <button type="submit" class="btn btn-primary">s'enregistre</button>
-                           <button class="btn btn-primary"><a href="page2.php">Connectez-vous ici</a> <p class="box-register"></p> </button> 
+                           <button class="btn btn-primary"><a href="accueil.php">vous vous voulez publie quelque chose</a> <p class="box-register"></p> </button> 
                          </div>
                      </div>
                     <form>
