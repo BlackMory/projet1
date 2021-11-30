@@ -32,7 +32,7 @@
             <label for="contenu" class="form-label">contenu</label>
             <textarea class="form-control" name="contenu" rows="3"></textarea>
             </div>
-            <div class="col-12">
+            <div class="mb-12">
                 <button type="submit" class="btn btn-primary" >twiter</button>
             </div>
         </form>

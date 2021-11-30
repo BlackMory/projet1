@@ -38,7 +38,6 @@ else{?>
         <button type="submit" class="btn btn-primary" id="envoye" >enrergistre les modification</button>
     </div>
 </form>
-</div>
 <?php } ?>
 <script src="j.js"></script>
 </body>
