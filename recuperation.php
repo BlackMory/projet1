@@ -14,14 +14,14 @@ array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 </head>
 <body>
 <?php
-    $req=$db->prepare('SELECT article.id AS id ,article.titre AS titre,article.contenu AS contenu,article.date_creation AS date,userss.prenom AS prenom,userss.nom AS nom
+    $req=$db->prepare('SELECT article.id AS id ,article.titre AS titre,article.contenu AS contenu,article.date_creation AS date,userss.prenom AS prenom,userss.nom AS nom, userss.email AS email
     FROM article LEFT JOIN userss ON article.id_user=userss.id
     ORDER BY article.date_creation  DESC');
     $req->execute();
     while($donnees=$req->fetch()){
 ?>
    <table class="table caption-top">
-  <caption>List of users</caption>
+  <caption>les articles de <?php echo $donnees['email'];?></caption>
   <thead>
     <tr>
     <th scope="col">id</th>

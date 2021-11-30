@@ -16,7 +16,7 @@
   <body>
   
     <div class="sucess">
-    <h1>Bienvenue <?php echo $_SESSION['email']; ?>!</h1>
+    <h1 style="text-align: center">Bienvenue <?php echo $_SESSION['email']; ?>!</h1>
     <div class="container">
         <form action="in.php" method="post">
             <!-- <div class="mb-3">
@@ -31,10 +31,6 @@
             <div class="mb-12">
             <label for="contenu" class="form-label">contenu</label>
             <textarea class="form-control" name="contenu" rows="3"></textarea>
-            </div>
-            <div class="mb-3">
-            <label for="date" class="form-label">DATE</label>
-            <input type="date" class="form-control"  name="date">
             </div>
             <div class="col-12">
                 <button type="submit" class="btn btn-primary" >twiter</button>

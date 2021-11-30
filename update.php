@@ -34,10 +34,6 @@ else{?>
     <label for="contenu" class="form-label">contenu</label>
     <textarea class="form-control" name="contenu" rows="3" ><?php echo $donnees['contenu'];?></textarea>
     </div>
-    <div class="mb-3">
-    <label for="date" class="form-label">DATE</label>
-    <input type="date" class="form-control"  name="date" value="<?php echo $donnees['date_creation'];?>">
-    </div>
     <div class="col-12">
         <button type="submit" class="btn btn-primary" id="envoye" >enrergistre les modification</button>
     </div>
