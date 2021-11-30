@@ -35,7 +35,7 @@ $db=new PDO('mysql:host=localhost;dbname=conn;charset=utf8','root','root',
                     <h2 class=card-title>veuillez vous enregistrer</h2>
                 </div>
                 <div class="card-body">
-                    <form action="page1.php" method="POST">
+                    <form action="accueil.php" method="POST">
                         <div class="row g-3">
                             <div class="col-6">
                                <input type="text" class="form-control" placeholder="prenom" aria-label="prenom" required name="prenom">

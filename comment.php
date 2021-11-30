@@ -54,18 +54,9 @@ foreach($donnees as $donnee ){
 </table>
 <?php }
 $req->closeCursor();?>
-<a href="accueil.php">ajouter un commentaire</a>
+<a href="accueil.php">ajouter un commentaire</a><br>
+<a href="recuperation.php">recupere tous les utilisateurs</a>
 <script>
-  $(document).ready(function() {
-	$.ajax({
-		url: "recu.php",
-		type: "POST",
-		cache: false,
-		success: function(dataResult){
-			$('#table').html(dataResult); 
-		}
-	});
-	$(function () {
 </script>
 </body>
 </html>
